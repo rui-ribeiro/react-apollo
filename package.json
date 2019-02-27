@@ -27,7 +27,7 @@
     "lint-staged": "lint-staged",
     "lint:fix": "npm run prettier && tslint 'src/*.ts*' --project tsconfig.json --fix",
     "postcompile": "rollup -c  && ./scripts/prepare-package.sh",
-    "postinstall": "rimraf ./node_modules/enzyme-adapter-react-16/build/ReactSixteenAdapter.js && cp ./scripts/ReactSixteenAdapter.js ./node_modules/enzyme-adapter-react-16/build/",
+    "postinstall": "rimraf ./node_modules/enzyme-adapter-react-16/build/ReactSixteenAdapter.js && xcopy ./scripts/ReactSixteenAdapter.js ./node_modules/enzyme-adapter-react-16/build/",
     "precommit": "pretty-quick --staged",
     "precompile": "rimraf lib",
     "predeploy": "npm run compile",
